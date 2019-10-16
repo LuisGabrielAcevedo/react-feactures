@@ -6,5 +6,13 @@
       "node_modules/**/*.ts",
       "coverage/lcov-report/*.js"
     ]
+  },
+  "rules": {
+    "prettier": true,
+    "indent": [true, "spaces", 2],
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "no-namespace": false,
+    "jsx-no-lambda": false
   }
 }
