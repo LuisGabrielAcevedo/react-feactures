@@ -1,13 +1,15 @@
-export const roomHeaders = [
+import { DynamicTableTextComponent } from "../../../../lgx-react-components/index";
+
+const roomHeaders = [
   {
     label: "Empresa",
     key: "company.name",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
   },
   {
     label: "Nombre",
     key: "name",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
   }
 ];
 

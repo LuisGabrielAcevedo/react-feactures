@@ -3,15 +3,15 @@ import {
   DynamicTableTextComponent,
   DynamicTableImageComponent
 } from "../constants/index";
-import DynamicTableImage from "./components/dynamic-table-image.component";
-import DynamicTableText from "./components/dynamic-table-text.component";
+import ImageComponent from "./components/dynamic-table-image.component";
+import TextComponent from "./components/dynamic-table-text.component";
 import PropTypes from "prop-types";
 
 class DynamicTableSelectComponent extends Component {
   components(currentComponent) {
     const components = {
-      [DynamicTableTextComponent]: DynamicTableText,
-      [DynamicTableImageComponent]: DynamicTableImage
+      [DynamicTableTextComponent]: TextComponent,
+      [DynamicTableImageComponent]: ImageComponent
     };
     return components[currentComponent];
   }

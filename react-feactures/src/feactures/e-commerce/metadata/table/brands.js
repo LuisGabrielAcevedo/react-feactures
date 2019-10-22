@@ -1,13 +1,15 @@
-export const brandHeaders = [
+import { DynamicTableTextComponent } from "../../../../lgx-react-components/index";
+
+const brandHeaders = [
   {
     label: "Empresa",
     key: "company.name",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
   },
   {
     label: "Nombre",
     key: "name",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
   }
 ];
 

@@ -54,15 +54,18 @@ const saleItems = [
   },
   {
     name: "Orders",
-    icon: <Icon className="fas fa-list" style={{ width: "1.3em" }} />
+    icon: <Icon className="fas fa-list" style={{ width: "1.3em" }} />,
+    redirect: "/e-commerce/inventory/orders/list"
   },
   {
     name: "POS",
-    icon: <Icon className="fas fa-shopping-cart" style={{ width: "1.3em" }} />
+    icon: <Icon className="fas fa-shopping-cart" style={{ width: "1.3em" }} />,
+    redirect: "/e-commerce/sale/pos"
   },
   {
     name: "Customers",
-    icon: <Icon className="fas fa-users" style={{ width: "1.3em" }} />
+    icon: <Icon className="fas fa-users" style={{ width: "1.3em" }} />,
+    redirect: "/e-commerce/inventory/customers/list"
   }
 ];
 

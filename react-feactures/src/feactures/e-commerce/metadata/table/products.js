@@ -1,20 +1,22 @@
+import { DynamicTableTextComponent } from "../../../../lgx-react-components/index";
+
 const productHeaders = [
   {
     label: "Nombre",
     key: "name",
-    component: "DynamicTableTextComponent",
+    component: DynamicTableTextComponent,
     sortable: "name"
   },
   {
     label: "Empresa",
     key: "company.name",
-    component: "DynamicTableTextComponent",
+    component: DynamicTableTextComponent,
     sortable: "company"
   },
   {
     label: "Price",
     key: "basePrice/a/$",
-    component: "DynamicTableTextComponent",
+    component: DynamicTableTextComponent,
     sortable: "basePrice"
   }
 ];

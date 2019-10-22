@@ -1,13 +1,15 @@
+import { DynamicTableTextComponent } from "../../../../lgx-react-components/index";
+
 const customerHeaders = [
   {
     label: "Nombre completo",
     key: "firstName,lastName",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
   },
   {
     label: "Email",
     key: "email",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
   }
 ];
 

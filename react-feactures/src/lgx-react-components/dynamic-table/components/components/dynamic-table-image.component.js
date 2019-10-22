@@ -1,8 +1,8 @@
 import React from "react";
 // import PropTypes from "prop-types";
 
-function DynamicTableImageComponent() {
-  return <div>DynamicTableImageComponent</div>;
+function ImageComponent() {
+  return <div>ImageComponent</div>;
 }
 
-export default DynamicTableImageComponent;
+export default ImageComponent;

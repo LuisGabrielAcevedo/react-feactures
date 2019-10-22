@@ -2,7 +2,7 @@ import React from "react";
 import formatTextFn from "../../utils/formatText";
 import PropTypes from "prop-types";
 
-function DynamicTableTextComponent({ item, header }) {
+function TextComponent({ item, header }) {
   const formatText = () => {
     return formatTextFn(item, header.key);
   };
@@ -10,9 +10,9 @@ function DynamicTableTextComponent({ item, header }) {
   return <div>{formatText()}</div>;
 }
 
-DynamicTableTextComponent.propTypes = {
+TextComponent.propTypes = {
   item: PropTypes.object,
   header: PropTypes.object
 };
 
-export default DynamicTableTextComponent;
+export default TextComponent;

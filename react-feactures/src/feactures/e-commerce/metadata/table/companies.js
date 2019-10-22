@@ -1,4 +1,6 @@
-export const companyHeaders = [
+import { DynamicTableTextComponent } from "../../../../lgx-react-components/index";
+
+const companyHeaders = [
   {
     label: "",
     key: "profileImage.url",
@@ -7,12 +9,12 @@ export const companyHeaders = [
   {
     label: "Nombre",
     key: "name",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
   },
   {
     label: "Pais",
     key: "country.name",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
   }
 ];
 

@@ -1,7 +1,7 @@
 import React from "react";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import ToolbarComponent from "./toolbar.component";
-import SideListComponent from "./sideListComponent";
+import SideListComponent from "./side-list.component";
 import MainContentRoutes from "./main-content.routes";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { useHistory } from "react-router-dom";

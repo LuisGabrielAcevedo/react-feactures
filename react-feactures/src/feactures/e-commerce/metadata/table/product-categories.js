@@ -1,13 +1,15 @@
+import { DynamicTableTextComponent } from "../../../../lgx-react-components/index";
+
 export const productcomponentHeaders = [
-  {
-    label: "Empresa",
-    key: "company.name",
-    component: "DynamicTableTextComponent"
-  },
   {
     label: "Nombre",
     key: "name",
-    component: "DynamicTableTextComponent"
+    component: DynamicTableTextComponent
+  },
+  {
+    label: "Descripcion",
+    key: "description",
+    component: DynamicTableTextComponent
   }
 ];
 

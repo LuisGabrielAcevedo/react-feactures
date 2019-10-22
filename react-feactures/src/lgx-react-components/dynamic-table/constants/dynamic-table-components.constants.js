@@ -1,2 +1,2 @@
-export const DynamicTableTextComponent = "DynamicTableTextComponent";
-export const DynamicTableImageComponent = "DynamicTableImageComponent";
+export const DynamicTableTextComponent = "TextComponent";
+export const DynamicTableImageComponent = "ImageComponent";

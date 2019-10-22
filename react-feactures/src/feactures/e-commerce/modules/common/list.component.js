@@ -3,7 +3,7 @@ import {
   DynamicTableComponent,
   defaultPagination,
   TitleBarComponent
-} from "../../../../../lgx-react-components/index";
+} from "../../../../lgx-react-components/index";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 import { withRouter } from "react-router-dom";
@@ -34,11 +34,9 @@ class ListComponent extends React.Component {
     this.resource = this.props.match.params.resource;
     this.module = this.props.match.params.module;
     this.title = this.resource;
-    const modelClassModule = await import(`../../../models/${this.resource}`);
+    const modelClassModule = await import(`../../models/${this.resource}`);
     this.modelClass = modelClassModule.default;
-    const headerModule = await import(
-      `../../../metadata/table/${this.resource}`
-    );
+    const headerModule = await import(`../../metadata/table/${this.resource}`);
     this.headers = headerModule.default;
     this.loadData({
       pagination: defaultPagination
