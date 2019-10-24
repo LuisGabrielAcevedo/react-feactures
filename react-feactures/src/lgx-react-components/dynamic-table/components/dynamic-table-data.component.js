@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
 import DynamicTableSelectComponent from "./dynamic-table-select.component";
+import ButtonComponent from "../components/components/dynamic-table-button.component";
 
 class DynamicTableDataComponent extends Component {
   render() {
-    const { data, headers } = this.props;
+    const { data, headers, rowActions } = this.props;
     return (
       <div className="table-data">
         {data.map((item, i) => (
@@ -22,6 +23,11 @@ class DynamicTableDataComponent extends Component {
                   <DynamicTableSelectComponent item={item} header={header} />
                 </Grid>
               ))}
+              {rowActions.map((button, k) => (
+                <Grid key={k} item style={{ width: "50px" }}>
+                  <ButtonComponent button={button} item={item} />
+                </Grid>
+              ))}
             </Grid>
           </div>
         ))}
@@ -32,7 +38,8 @@ class DynamicTableDataComponent extends Component {
 
 DynamicTableDataComponent.propTypes = {
   data: PropTypes.array,
-  headers: PropTypes.array
+  headers: PropTypes.array,
+  rowActions: PropTypes.array
 };
 
 export default DynamicTableDataComponent;

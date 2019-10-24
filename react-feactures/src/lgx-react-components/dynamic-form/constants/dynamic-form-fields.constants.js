@@ -3,7 +3,6 @@ export const DynamicFormAsyncAutocompleteComponent =
 export const DynamicFormAutocompleteComponent = "AutocompleteComponent";
 export const DynamicFormCheckboxComponent = "CheckboxComponent";
 export const DynamicFormDatepickerComponent = "DatepickerComponent";
-export const DynamicFormEnumSelectComponent = "EnumSelectComponent";
 export const DynamicFormImageComponent = "ImageComponent";
 export const DynamicFormNumericFieldComponent = "NumericFieldComponent";
 export const DynamicFormPasswordFieldComponent = "PasswordFieldComponent";

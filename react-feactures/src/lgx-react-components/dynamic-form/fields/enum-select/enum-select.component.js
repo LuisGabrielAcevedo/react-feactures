@@ -15,8 +15,8 @@ class EnumSelectComponent extends DynamicFormFieldComponent {
   }
 
   render() {
-    const error = this.errorValue() ? (
-      <FormHelperText error={this.errorValue()}>
+    const error = this.invalid() ? (
+      <FormHelperText error={this.invalid()}>
         {this.errorMessage()}
       </FormHelperText>
     ) : null;
@@ -29,7 +29,7 @@ class EnumSelectComponent extends DynamicFormFieldComponent {
           value={this.getValue()}
           onChange={this.handleChange}
           onBlur={this.handleFocus}
-          error={this.errorValue()}
+          error={this.invalid()}
           renderValue={formattedValue =>
             this.multiple() ? formattedValue.join(",") : formattedValue
           }

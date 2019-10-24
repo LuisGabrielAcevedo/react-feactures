@@ -1,6 +1,6 @@
 import { Model } from "lgx-axios-dev-tools";
 
-export class AdminSystemBaseModel extends Model {
+export class ECommerceBaseModel extends Model {
   queryConfig = {
     orderBy: "sort",
     with: "populate",

@@ -14,15 +14,15 @@ class RadioGroupComponent extends DynamicFormFieldComponent {
   }
 
   render() {
-    const error = this.errorValue() ? (
-      <FormHelperText error={this.errorValue()}>
+    const error = this.invalid() ? (
+      <FormHelperText error={this.invalid()}>
         {this.errorMessage()}
       </FormHelperText>
     ) : null;
     return (
       <FormControl fullWidth>
         <FormLabel
-          className={this.errorValue() ? "form-error" : ""}
+          className={this.invalid() ? "form-error" : ""}
           component="legend"
         >
           {this.label()}
@@ -34,7 +34,7 @@ class RadioGroupComponent extends DynamicFormFieldComponent {
               value={option[this.associationValue()]}
               control={<Radio color="primary" />}
               label={option[this.associationText()]}
-              className={this.errorValue() ? "form-error" : ""}
+              className={this.invalid() ? "form-error" : ""}
             />
           ))}
         </RadioGroup>

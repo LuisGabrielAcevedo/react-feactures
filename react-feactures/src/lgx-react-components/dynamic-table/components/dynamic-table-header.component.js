@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 
 class DynamicTableHeaderComponent extends Component {
   render() {
-    const { headers } = this.props;
+    const { headers, rowActions } = this.props;
     return (
       <Grid
         container
@@ -17,13 +17,17 @@ class DynamicTableHeaderComponent extends Component {
             <span>{header.label}</span>
           </Grid>
         ))}
+        {rowActions.map((button, k) => (
+          <Grid key={k} item style={{ width: "50px" }}></Grid>
+        ))}
       </Grid>
     );
   }
 }
 
 DynamicTableHeaderComponent.propTypes = {
-  headers: PropTypes.array
+  headers: PropTypes.array,
+  rowActions: PropTypes.array
 };
 
 export default DynamicTableHeaderComponent;

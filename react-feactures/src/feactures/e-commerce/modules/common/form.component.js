@@ -1,7 +1,8 @@
 import React from "react";
 import {
   TitleBarComponent,
-  DynamicFormComponent
+  DynamicFormComponent,
+  DynamicFormFilledAppearance
 } from "../../../../lgx-react-components/index";
 import Fab from "@material-ui/core/Fab";
 import CheckIcon from "@material-ui/icons/Check";
@@ -64,10 +65,12 @@ class FormComponent extends React.Component {
 
   async saveAction(model) {
     await this.modelClass.save(model);
+    this.props.history.push(`/e-commerce/${this.module}/${this.resource}/list`);
   }
 
   async updateAction(model) {
     await this.modelClass.update(model._id, model);
+    this.props.history.push(`/e-commerce/${this.module}/${this.resource}/list`);
   }
 
   render() {
@@ -95,11 +98,15 @@ class FormComponent extends React.Component {
         </Fab>
       </div>
     );
+
     return (
       <div>
         <TitleBarComponent title={this.title} rightContent={rightContent} />
         <DynamicFormComponent
           formConfig={formConfig}
+          materialData={{
+            appearance: DynamicFormFilledAppearance
+          }}
           ref={form => (this.form = form)}
           model={data}
         />

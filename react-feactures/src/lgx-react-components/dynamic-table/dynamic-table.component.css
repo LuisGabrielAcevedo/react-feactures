@@ -8,6 +8,16 @@
   font-size: 14px;
 }
 
+@media screen and (max-width: 800px) {
+  .table-content {
+    min-width: 800px;
+    margin: 0;
+  }
+  .table-scroll {
+    overflow-x: scroll;
+  }
+}
+
 @keyframes gradient {
   0% {
     background-position: -400px 0;

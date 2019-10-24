@@ -13,6 +13,7 @@ class ListComponent extends React.Component {
   resource = null;
   module = null;
   title = this.props.match.params.resource;
+  rowActions = [];
   headers = [];
 
   state = {
@@ -38,6 +39,10 @@ class ListComponent extends React.Component {
     this.modelClass = modelClassModule.default;
     const headerModule = await import(`../../metadata/table/${this.resource}`);
     this.headers = headerModule.default;
+    const rowActions = await import(
+      `../../metadata/table-row-actions/${this.resource}`
+    );
+    this.rowActions = rowActions.default;
     this.loadData({
       pagination: defaultPagination
     });
@@ -120,6 +125,7 @@ class ListComponent extends React.Component {
           data={data}
           pagination={pagination}
           dynamicTableChanges={changes => this.dynamicTableChanges(changes)}
+          rowActions={this.rowActions}
         />
       </div>
     );

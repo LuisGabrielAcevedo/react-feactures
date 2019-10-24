@@ -9,8 +9,8 @@ class CheckboxComponent extends DynamicFormFieldComponent {
   getValue = () => this.value() || false;
 
   render() {
-    const error = this.errorValue() ? (
-      <FormHelperText error={this.errorValue()}>
+    const error = this.invalid() ? (
+      <FormHelperText error={this.invalid()}>
         {this.errorMessage()}
       </FormHelperText>
     ) : null;
@@ -26,7 +26,7 @@ class CheckboxComponent extends DynamicFormFieldComponent {
             />
           }
           label={this.label()}
-          className={this.errorValue() ? "form-error" : ""}
+          className={this.invalid() ? "form-error" : ""}
         />
         {error}
       </FormControl>

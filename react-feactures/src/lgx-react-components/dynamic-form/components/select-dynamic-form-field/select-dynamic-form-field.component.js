@@ -5,7 +5,6 @@ import AsyncAutocompleteComponent from "../../fields/async-autocomplete/async-au
 import AutocompleteComponent from "../../fields/autocomplete/autocomplete.component";
 import CheckboxComponent from "../../fields/checkbox/checkbox.component";
 import DatepickerComponent from "../../fields/datepicker/datepicker.component";
-import EnumSelectComponent from "../../fields/enum-select/enum-select.component";
 import ImageComponent from "../../fields/image/image.component";
 import NumericFieldComponent from "../../fields/numeric-field/numeric-field";
 import PasswordFieldComponent from "../../fields/password-field/password-field.component";
@@ -23,7 +22,6 @@ class SelectDynamicFormFieldComponent extends Component {
       [DynamicFormFieldsConstants.DynamicFormAutocompleteComponent]: AutocompleteComponent,
       [DynamicFormFieldsConstants.DynamicFormCheckboxComponent]: CheckboxComponent,
       [DynamicFormFieldsConstants.DynamicFormDatepickerComponent]: DatepickerComponent,
-      [DynamicFormFieldsConstants.DynamicFormEnumSelectComponent]: EnumSelectComponent,
       [DynamicFormFieldsConstants.DynamicFormImageComponent]: ImageComponent,
       [DynamicFormFieldsConstants.DynamicFormNumericFieldComponent]: NumericFieldComponent,
       [DynamicFormFieldsConstants.DynamicFormPasswordFieldComponent]: PasswordFieldComponent,

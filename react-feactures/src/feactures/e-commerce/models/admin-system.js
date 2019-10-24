@@ -1,5 +1,5 @@
-import { AdminSystemBaseModel } from "./base-model/base-model";
+import { ECommerceBaseModel } from "./e-commerce-base-model/e-commerce-base-model";
 
-export default class AdminSystem extends AdminSystemBaseModel {
+export default class AdminSystem extends ECommerceBaseModel {
   resource = "admin-system";
 }

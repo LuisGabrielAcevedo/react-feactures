@@ -6,8 +6,14 @@ const DashboardComponent = React.lazy(() =>
 const EcommerceComponent = React.lazy(() =>
   import("./feactures/e-commerce/e-commerce.component")
 );
-const ExamplesComponent = React.lazy(() =>
-  import("./feactures/examples/examples.component")
+const MercadoLibreComponent = React.lazy(() =>
+  import("./feactures/examples/mercado-libre/mercado-libre.component")
+);
+const YoutubeComponent = React.lazy(() =>
+  import("./feactures/examples/youtube/youtube.component")
+);
+const SpotifyComponent = React.lazy(() =>
+  import("./feactures/examples/spotify/spotify.component")
 );
 const GamesComponent = React.lazy(() =>
   import("./feactures/games/games.component")
@@ -27,10 +33,22 @@ const AppRoutes = [
     component: EcommerceComponent
   },
   {
-    path: "/examples",
-    exact: true,
-    name: "examples",
-    component: ExamplesComponent
+    path: "/mercado-libre",
+    exact: false,
+    name: "mercado-libre",
+    component: MercadoLibreComponent
+  },
+  {
+    path: "/spotify",
+    exact: false,
+    name: "spotify",
+    component: SpotifyComponent
+  },
+  {
+    path: "/youtube",
+    exact: false,
+    name: "youtube",
+    component: YoutubeComponent
   },
   { path: "/games", exact: true, name: "games", component: GamesComponent }
 ];
